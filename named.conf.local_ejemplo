@@ -1,0 +1,15 @@
+//
+// Configuración de zonas locales
+//
+
+// Zona directa de localhost
+zone "localhost" {
+    type master;
+    file "/etc/bind/db.local";
+};
+
+// Zona inversa de loopback: 127.0.0.0/8
+zone "127.in-addr.arpa" {
+    type master;
+    file "/etc/bind/db.127";
+};
